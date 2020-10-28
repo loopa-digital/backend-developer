@@ -23,3 +23,5 @@ Este comando irá executar os seguintes passos:
 3. Instalação das dependências
 
 Você poderá acompanhar o progresso no terminal.
+
+Após esses passos o ambiente poderá ser acessado através da url: **http://localhost:8000**
