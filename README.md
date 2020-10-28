@@ -12,7 +12,7 @@
 
 ## Instruções para execução
 
-### Execute o arquivo `Makefile` na raiz de cada projeto:
+### Execute o arquivo `Makefile` na raiz do projeto
 
 `make init`
 
