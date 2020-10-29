@@ -12,8 +12,6 @@
 
 ## Collections
 
-Disponíveis na pasta `collections` na raiz do projeto
-
 -   Postman
 -   Insomnia
 
