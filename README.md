@@ -10,6 +10,13 @@
 
 -   Docker
 
+## Collections
+
+-   Postman
+-   Insomnia
+
+### Disponíveis na pasta `collections` na raiz do projeto
+
 ## Instruções para execução
 
 ### Execute o arquivo `Makefile` na raiz do projeto
