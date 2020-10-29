@@ -12,7 +12,11 @@ init:
 	tput setaf 0
 
 	tput setaf 4
-	docker exec backend-developer_web_1 composer install
+	docker exec backend-developer_web_1 composer dumpautoload && composer install
+	tput setaf 0
+
+	tput setaf 4
+	docker exec backend-developer_web_1 ./vendor/bin/phpunit
 	tput setaf 0
 
 	tput setaf 2
@@ -21,7 +25,11 @@ init:
 	make update
 update:
 	tput setaf 4
-	docker exec backend-developer_web_1 composer update
+	docker exec backend-developer_web_1 composer dumpautoload && composer update
+	tput setaf 0
+
+	tput setaf 4
+	docker exec backend-developer_web_1 ./vendor/bin/phpunit
 	tput setaf 0
 
 	tput setaf 2;

@@ -18,6 +18,17 @@ class SaleController extends Controller
 
     public function store(SaleRequest $request): JsonResponse
     {
-        return $this->service->read(file($request->file('sales')));
+        try {
+            return $this->service->read(
+                file($request->file('sales'))
+            );
+        } catch (\Throwable $th) {
+            return response()->json(
+                [
+                    'message' => 'unexpected internal error.'
+                ],
+                500
+            );
+        }
     }
 }
