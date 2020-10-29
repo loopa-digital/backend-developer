@@ -12,10 +12,10 @@
 
 ## Collections
 
+Disponíveis na pasta `collections` na raiz do projeto
+
 -   Postman
 -   Insomnia
-
-### Disponíveis na pasta `collections` na raiz do projeto
 
 ## Instruções para execução
 
