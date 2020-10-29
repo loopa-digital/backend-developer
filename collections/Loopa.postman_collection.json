@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "6c1d5065-b1a5-4fc6-b76a-0f02bbb7b4e5",
+		"name": "Loopa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "sales",
+					"item": [
+						{
+							"name": "sales",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sales",
+											"description": "arquivo .txt",
+											"type": "file",
+											"src": "/Users/mac/Documents/GitHub/backend-developer/sales.txt"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/v1/sales",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"sales"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
