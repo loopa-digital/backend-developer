@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+
+  #PHP
+  app:
+    volumes:
+      - ./:/var/www/html/
+    image: sales-api-php
+    container_name: sales-api-php
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    networks:
+      - sales-api-network
+
+  #Web Server
+  nginx:
+    volumes:
+      - ./:/var/www/html/
+    image: sales-api-webserver
+    container_name: sales-api-webserver
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - "${NGINX_HTTP_PORT}:80"
+      - "${NGINX_HTTPS_PORT}:443"
+    depends_on:
+      - "app"
+    networks:
+      - sales-api-network
+
+  #Bash
+  bash:
+    volumes:
+      - ./:/app
+    image: sales-api-bash
+    container_name: sales-api-bash
+    environment:
+      - APP_NAME=${APP_NAME}
+      - APP_URL=${APP_URL}
+      - APP_PORT=${NGINX_HTTP_PORT}
+      - APP_TIMEZONE=${APP_TIMEZONE}
+    build:
+      context: .
+      dockerfile: ./docker/bash/Dockerfile
+    depends_on:
+      - "app"
+    networks:
+      - sales-api-network
+networks:
+  sales-api-network:
+    driver: bridge
