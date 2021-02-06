@@ -51,7 +51,7 @@ Quando você tiver certeza de que o Git está instalado em sua máquina e de que
 Faça uma cópia local do repositório utilizando o seguinte comando no terminal ou prompt de comando:
 
 ```
-https://github.com/fernandokarpinski/backend-developer.git
+git clone https://github.com/fernandokarpinski/backend-developer.git
 ```
 
 Em seguida, ainda pelo terminal ou prompt de comando, entre na pasta backend-developer.
