@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Esse projeto contém a solução para o teste postado em [https://github.com/loopa-digital/backend-developer]. O código foi desenvolvido utilizando-se o framework Lumen.
+Esse projeto contém a solução para o teste postado em https://github.com/loopa-digital/backend-developer. O código foi desenvolvido utilizando-se o framework Lumen.
 
 Além das funcionalidades solicitadas, foram implementados também testes unitários para o PHPUnit.
 
@@ -12,7 +12,7 @@ Nesse documento serão descritas instruções gerais de como executar esse proje
 
 ### Instalação do PHP e extensões necessárias
 
-Esse projeto foi escrito no contexto do framework Lumen, versão 8.2.2. Para essa versão, conforme descrito em [https://lumen.laravel.com/docs/8.x/installation], é necessário que você tenha instalado em sua máquina o PHP de linha de comando na versão 7.3, ou em uma versão maior, além das extensões OpenSSL, PDO e Mbstring do PHP.
+Esse projeto foi escrito no contexto do framework Lumen, versão 8.2.2. Para essa versão, conforme descrito em https://lumen.laravel.com/docs/8.x/installation, é necessário que você tenha instalado em sua máquina o PHP de linha de comando na versão 7.3, ou em uma versão maior, além das extensões OpenSSL, PDO e Mbstring do PHP.
 
 Para garantir que a instalação dessas ferramentas está correta, execute o seguinte comando para verificar se o executável do PHP está acessível:
 
