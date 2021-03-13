@@ -17,6 +17,8 @@ class SalesParser
     {
         $sales = collect();
 
+        $this->checkEmpty($content);
+
         $lines = Str::of($content)->trim()->explode("\n")->filter();
 
         foreach ($lines as $line) {
@@ -72,7 +74,7 @@ class SalesParser
         $installmentsInfo = collect();
 
         $installmentAmount = floatval(
-            number_format($amount / intval($installments), 2)
+            number_format($amount / intval($installments), 2, '.', '')
         );
 
         foreach(range(1, intval($installments)) as $installment) {
@@ -102,10 +104,17 @@ class SalesParser
         return $installmentsInfo;
     }
 
+    protected function checkEmpty($content)
+    {
+        if (Str::of($content)->trim()->length() === 0) {
+            throw new InvalidContentException('Content is empty');
+        }
+    }
+
     protected function checkLine($line)
     {
         if (Str::of($line)->trim()->length() !== 51 ) {
-            throw new InvalidFileException('File structure is invalid - Line length is incorrect');
+            throw new InvalidContentException('Content structure is invalid - Line length is incorrect');
         }
     }
 }

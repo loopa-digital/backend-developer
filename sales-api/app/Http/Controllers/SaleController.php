@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Libraries\InvalidFileException;
+use App\Libraries\InvalidContentException;
 use App\Libraries\SalesParser;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -30,7 +30,7 @@ class SaleController extends Controller
 
         try {
             $sales = (new SalesParser)->parse($content);
-        } catch (InvalidFileException $e) {
+        } catch (InvalidContentException $e) {
             return new JsonResponse([
                 'code' => 422,
                 'error' => $e->getMessage()
