@@ -27,6 +27,7 @@ A rota é `/sales`:
 http://localhost:8080/sales
 ```
 
+O name do parâmetro que a api espera receber o arquivo é 'file'.
 Para os testes, pode-se utilizar um programa como Postaman ou Insomnia para fazer o envio dos arquivos de teste.
 Com o Insomnia, por exemplo, é só enviar o arquivo escolhido como um parâmetro de Multipart Form com o nome 'file'.
 Foi utilizado o arquivo `sales.txt` na raiz do repositório para testes, e variações de alguns dos valores contidos no arquivo.
