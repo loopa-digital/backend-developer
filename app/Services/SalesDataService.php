@@ -103,9 +103,4 @@ class SalesDataService
 
         return $this->rawData;
     }
-
-    private function validateLineLenght($line)
-    {
-        return strlen($line) == 51 ? true : false;
-    }
 }
