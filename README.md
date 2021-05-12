@@ -1,7 +1,7 @@
 # Test Backend Developer Loopa Digital
 
 ## Como usar
-### Execute o comando para instalar as dependencias 
+### Execute o comando para instalar as dependências 
  composer install
  
 ### Execute o comando para iniciar o servidor
@@ -9,7 +9,7 @@
 
 
 ### Envie somente arquivos txt contendo a seguinte estrutura:
-    Arquivo de exemplo *sales.txt* está incluso no repositõrio
+    Arquivo de exemplo *sales.txt* está incluso no repositório
 
     ```
     12320201012000011132703Comprador 1         06050190
@@ -17,8 +17,6 @@
     23120201014000026370003Comprador 3         01454000
     ```
 ### Exemplo de resposta da API
-
-Usando de exemplo a terceira linha `23120201014000026370003Comprador 3         01454000`, a resposta da API deve seguir o seguinte formato.
 
 ```JSON
 {
