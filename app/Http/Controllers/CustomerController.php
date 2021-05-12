@@ -56,8 +56,7 @@ class CustomerController extends Controller
             $saleValue = number_format((float)($saleValue/100), 2, '.', '');
             $installmentNumber = intval($installmentNumber);
             $customerName = trim($customerName);
-            $cepRequest = Http::get("https://viacep.com.br/ws/$customerCep/json/");
-            $cepData = $cepRequest->json();  
+            $cepData = $this->getAddress($customerCep);
             
             //Make installments
             if($installmentNumber){
@@ -117,6 +116,11 @@ class CustomerController extends Controller
         }
     
         return response()->json((["sales" => $interpreterResponse]), 200);
+    }
+
+    private function getAddress($cep){
+        $cepRequest = Http::get("https://viacep.com.br/ws/$cep/json/");
+        return $cepRequest->json();  
     }
     
 }
