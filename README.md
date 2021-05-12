@@ -16,8 +16,6 @@ Segue exemplo requisição no Postman:
 ![image](https://user-images.githubusercontent.com/34348609/118025281-a77fc180-b32d-11eb-9d1b-768299c06594.png)
 
 ### Envie somente arquivos txt contendo a seguinte estrutura:
-    Arquivo de exemplo *sales.txt* está incluso no repositório
-
     ```
     12320201012000011132703Comprador 1         06050190
     32120201013000015637504Comprador 2         06330000
