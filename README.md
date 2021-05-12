@@ -11,7 +11,8 @@
 Acessar http://localhost:8080/customer/interpreter
 
 ### Enviar arquivo no formulário prenchendo campo com customerTxt
-Segue exemplo requisição:
+Segue exemplo requisição no Postman:
+
 ![image](https://user-images.githubusercontent.com/34348609/118025281-a77fc180-b32d-11eb-9d1b-768299c06594.png)
 
 ### Envie somente arquivos txt contendo a seguinte estrutura:
