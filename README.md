@@ -6,7 +6,9 @@
  
 ### Execute o comando para iniciar o servidor
  php -S localhost:8080 -t public
-
+ 
+### Rota para acessar o interpretador
+http://localhost:8080/customer/interpreter
 
 ### Envie somente arquivos txt contendo a seguinte estrutura:
     Arquivo de exemplo *sales.txt* está incluso no repositório
