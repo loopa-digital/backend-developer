@@ -6,7 +6,14 @@
  
 ### Execute o comando para iniciar o servidor
  php -S localhost:8080 -t public
+ 
+### Rota para acessar o interpretador
+Acessar http://localhost:8080/customer/interpreter
 
+### Enviar arquivo no formulário prenchendo campo com customerTxt
+Segue exemplo requisição no Postman:
+
+![image](https://user-images.githubusercontent.com/34348609/118025281-a77fc180-b32d-11eb-9d1b-768299c06594.png)
 
 ### Envie somente arquivos txt contendo a seguinte estrutura:
     Arquivo de exemplo *sales.txt* está incluso no repositório
