@@ -2,11 +2,11 @@
 
 ## Como usar
 ### Execute o comando para instalar as dependencias 
- ```composer install
- ```
+ composer install
+ 
 ### Execute o comando para iniciar o servidor
- ```php -S localhost:8080 -t public
- ```
+ php -S localhost:8080 -t public
+
 
 ### Envie somente arquivos txt contendo a seguinte estrutura:
     Arquivo de exemplo *sales.txt* está incluso no repositõrio
