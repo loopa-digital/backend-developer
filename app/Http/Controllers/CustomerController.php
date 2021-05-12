@@ -16,7 +16,7 @@ class CustomerController extends Controller
         $fileCustomer = $request->file('customerTxt'); 
         $fileExtension = $fileCustomer->clientExtension(); 
         
-        //Validar extension file
+        //Validate extension file
         if($fileExtension != "txt"){
             return response()->json([
                 'customerTxt' => 'The customer txt must be a file of type: txt.'
