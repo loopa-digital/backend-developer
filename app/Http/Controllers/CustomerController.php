@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Http;
 class CustomerController extends Controller
 {
     public function interpreter(Request $request){
-    
-      
+          
         $this->validate($request, [
             'customerTxt' => 'required|mimes:txt',
         ]);
@@ -16,7 +15,8 @@ class CustomerController extends Controller
         //Get file customer
         $fileCustomer = $request->file('customerTxt'); 
         $fileExtension = $fileCustomer->clientExtension(); 
-
+        
+        //Validar extension file
         if($fileExtension != "txt"){
             return response()->json([
                 'customerTxt' => 'The customer txt must be a file of type: txt.'
@@ -95,8 +95,6 @@ class CustomerController extends Controller
                 }
             }
 
-     
-            
             //Set customer response
             $customerInformations = array(
                 "id" => $customerid,
