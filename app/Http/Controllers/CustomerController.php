@@ -14,8 +14,8 @@ class CustomerController extends Controller
         ]);
 
         //Get file customer
-        $file = $request->file('customerTxt'); 
-        $fileExtension = $file->clientExtension(); 
+        $fileCustomer = $request->file('customerTxt'); 
+        $fileExtension = $fileCustomer->clientExtension(); 
 
         if($fileExtension != "txt"){
             return response()->json([
@@ -23,12 +23,12 @@ class CustomerController extends Controller
             ], 400);
         }   
 
-        $texto = explode("\n", $file->get());
+        $customerContent = explode("\n", $fileCustomer->get());
 
         //File validate content
         $Nocustomer = true;
         $compradores = array();
-        foreach($texto as $item){
+        foreach($customerContent as $item){
             if(strlen($item) >= 52){
                $compradores[] = $item;
                $Nocustomer = false;
