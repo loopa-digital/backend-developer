@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
-
-class CustomerController extends Controller
-{
+use App\Helpers\Helper;
+class CustomerController extends Controller 
+{   
     public function interpreter(Request $request){
           
         $this->validate($request, [
@@ -53,10 +52,22 @@ class CustomerController extends Controller
          
             //Information transformation
             $saleDate = date("Y-m-d", strtotime($saleDate));
+            if(!is_numeric($saleValue)){
+                return response()->json([
+                    'error' => 'Sale value wrong!'
+                ], 400);
+            }
+
             $saleValue = number_format((float)($saleValue/100), 2, '.', '');
             $installmentNumber = intval($installmentNumber);
             $customerName = trim($customerName);
-            $cepData = $this->getAddress($customerCep);
+            $cepData = Helper::getAddress($customerCep);
+
+            if(!$cepData){
+                return response()->json([
+                    'error' => 'CEP wrong!'
+                ], 400);
+            }
             
             //Make installments
             if($installmentNumber){
@@ -116,11 +127,6 @@ class CustomerController extends Controller
         }
     
         return response()->json((["sales" => $interpreterResponse]), 200);
-    }
-
-    private function getAddress($cep){
-        $cepRequest = Http::get("https://viacep.com.br/ws/$cep/json/");
-        return $cepRequest->json();  
     }
     
 }
